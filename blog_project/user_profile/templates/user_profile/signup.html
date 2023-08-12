@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sign-up{% endblock %}
+{% block content %}
+<h1 class="signup-message">Sign Up</h1>
+<hr>
+<form method="post">
+    <p>Username: {{ form.username }}</p>
+    <p>Password: &nbsp{{ form.password1 }}</p>
+    <p class="repeat-password">Repeat the password: {{ form.password2 }}</p>
+    {% csrf_token %}
+    <p><button type="submit" class="btn btn-success">Sign Up</button></p>
+</form>
+{% endblock %}

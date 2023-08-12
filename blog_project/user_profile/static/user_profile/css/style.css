@@ -1,0 +1,23 @@
+.login-message, .signup-message {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.greeting {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+.repeat-password {
+    margin-right: 75px;
+}
+
+p.welcome-message {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+}

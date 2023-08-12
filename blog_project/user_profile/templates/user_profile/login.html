@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1 class="login-message" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Log In</h1>
+<hr>
+<form method="post">
+    <p>Username: {{ form.username }}</p>
+    <p>Password: &nbsp{{ form.password }}</p>
+    {% csrf_token %}
+    <p class="login-button">
+        <button type="submit" class="btn btn-success">Log In</button>
+    </p>
+</form>
+{% endblock %}
