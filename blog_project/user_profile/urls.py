@@ -1,6 +1,5 @@
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LogoutView, LoginView
 from django.urls import path
-from django.views.generic import TemplateView
 
 from user_profile.views import SignupView
 

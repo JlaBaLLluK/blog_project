@@ -4,11 +4,24 @@
 {% block content %}
 <h1 class="signup-message">Sign Up</h1>
 <hr>
+{% if form.errors %}
+{% for error in form.errors %}
+{% if error == "username" %}
+<p class="username-error">This username is already taken!</p>
+{% endif %}
+{% if error == "password2" %}
+<p class="password-error">This password either is too weak or passwords aren't the same!</p>
+{% endif %}
+{% endfor %}
+{% endif %}
 <form method="post">
     <p>Username: {{ form.username }}</p>
     <p>Password: &nbsp{{ form.password1 }}</p>
     <p class="repeat-password">Repeat the password: {{ form.password2 }}</p>
     {% csrf_token %}
-    <p><button type="submit" class="btn btn-success">Sign Up</button></p>
+    <p>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </p>
+    <p>Already have an account? You can <a href="{% url 'login' %}">log in</a> now!</p>
 </form>
 {% endblock %}

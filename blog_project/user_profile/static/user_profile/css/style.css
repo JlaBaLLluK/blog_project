@@ -12,6 +12,11 @@ p {
     text-align: center;
 }
 
+.error-message, .username-error, .password-error {
+    font-size: 20px;
+    color: red;
+}
+
 .repeat-password {
     margin-right: 75px;
 }

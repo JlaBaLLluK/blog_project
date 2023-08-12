@@ -4,8 +4,6 @@ from django.shortcuts import render
 from django.views import View
 
 
-
-
 class SignupView(View):
     template_name = 'user_profile/signup.html'
 
@@ -15,7 +13,7 @@ class SignupView(View):
     def post(self, request):
         form = UserCreationForm(request.POST)
         if not form.is_valid():
-            return self.get(request)
+            return render(request, self.template_name, {'form': form})
 
         form.save()
         username = form.cleaned_data.get('username')
