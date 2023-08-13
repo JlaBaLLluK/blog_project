@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ user }}'s posts{% endblock %}
+{% block content %}
+{% if posts %}
+<h2 class="your-posts-message">Your posts:</h2>
+<ul class="all-posts">
+    {% for post in posts %}
+    <li><a href="#">{{ post }}</a>; publish date - {{ post.publish_date }}.</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2 class="no-posts-message">You didn't write any post yet!</h2>
+{% endif %}
+{% endblock %}

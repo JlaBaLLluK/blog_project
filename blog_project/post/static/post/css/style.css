@@ -1,0 +1,20 @@
+.your-posts-message, .no-posts-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.all-posts {
+    font-size: 20px;
+    list-style: none;
+    margin-left: -15px;
+}
+
+.all-posts a {
+    font-size: 20px;
+    color: black;
+}
+
+.all-posts a:hover {
+    color: #4287f5;
+}
+

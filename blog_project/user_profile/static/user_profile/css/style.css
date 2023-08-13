@@ -3,12 +3,12 @@
     text-align: center;
 }
 
-.greeting {
+.greeting, .welcome-message, .profile-settings-message {
     padding-top: 75px;
     margin-left: 20px;
 }
 
-p {
+form p {
     text-align: center;
 }
 
@@ -21,8 +21,48 @@ p {
     margin-right: 75px;
 }
 
-p.welcome-message {
+p.success-message {
     text-align: left;
     margin-left: 20px;
     font-size: 20px;
+}
+
+.navigation-message {
+    margin-left: 30px;
+}
+
+.navigation-contents {
+    font-size: 20px;
+}
+
+.navigation-contents li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation-contents li a:hover {
+    text-decoration: none;
+    color: #4287f5;
+}
+
+.username-message {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.change-account-data {
+    list-style: none;
+}
+
+.change-account-data li {
+    margin-left: -15px;
+}
+
+.change-account-data a {
+    color: black;
+    font-size: 18px;
+}
+
+.change-account-data a:hover {
+    color: #4287f5;
 }
