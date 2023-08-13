@@ -1,4 +1,5 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render
 from django.views import View
@@ -21,3 +22,10 @@ class SignupView(View):
         user = authenticate(username=username, password=password)
         login(request, user)
         return render(None, 'user_profile/registration_done.html', {'user': user})
+
+
+class ProfileView(View):
+    template_name = 'user_profile/user_profile.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
