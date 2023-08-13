@@ -6,7 +6,7 @@
 <h2 class="your-posts-message">Your posts:</h2>
 <ul class="all-posts">
     {% for post in posts %}
-    <li><a href="#">{{ post }}</a>; publish date - {{ post.publish_date }}.</li>
+    <li><a href="{% url 'single_post' post.id %}">{{ post }}</a>; publish date - {{ post.publish_date }}.</li>
     {% endfor %}
 </ul>
 {% else %}

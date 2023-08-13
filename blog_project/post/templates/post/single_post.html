@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ post.post_title }}{% endblock %}
+{% block content %}
+<h2 class="post-title">{{ post.post_title }}</h2>
+<p class="publish-date">{{ post.publish_date }}</p>
+<p class="post-text">{{ post.post_text }}</p>
+{% endblock %}

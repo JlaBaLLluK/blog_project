@@ -18,3 +18,16 @@
     color: #4287f5;
 }
 
+.post-title {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.publish-date {
+    margin-left: 20px;
+}
+
+.post-text {
+    text-indent: 20px;
+}
+
