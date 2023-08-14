@@ -6,10 +6,10 @@
 <h2 class="your-posts-message">Your posts:</h2>
 <ul class="all-posts">
     {% for post in posts %}
-    <li><a href="{% url 'single_post' post.id %}">{{ post }}</a>; publish date - {{ post.publish_date }}.</li>
+    <li><a href="{% url 'single_post' post.id %}">{{ post }}</a>; publish date - {{ post.publish_date }}</li>
     {% endfor %}
 </ul>
 {% else %}
-<h2 class="no-posts-message">You didn't write any post yet!</h2>
+<h2 class="no-posts-message">There aren't any posts yet!</h2>
 {% endif %}
 {% endblock %}

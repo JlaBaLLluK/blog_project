@@ -3,5 +3,14 @@
 Django Blog
 {% endblock %}
 {% block content %}
-
+{% if posts %}
+<h2 class="your-posts-message">All posts ordered by publish date:</h2>
+<ul class="all-posts">
+    {% for post in posts %}
+    <li><a href="{% url 'single_post' post.id %}">{{ post }}</a>; publish date - {{ post.publish_date }} Author - {{ post.author }}.</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2 class="no-posts-message">There aren't any posts yet!</h2>
+{% endif %}
 {% endblock %}

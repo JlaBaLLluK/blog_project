@@ -8,7 +8,7 @@
     margin-left: 20px;
 }
 
-form p {
+.login-form p, .signup-form p {
     text-align: center;
 }
 

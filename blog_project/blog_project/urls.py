@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+from post.views import AllPostsView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'), name='homepage'),
+    path('', AllPostsView.as_view(), name='homepage'),
     path('posts/', include('post.urls')),
     path('users/', include('user_profile.urls')),
 ]

@@ -1,4 +1,4 @@
-.your-posts-message, .no-posts-message {
+.your-posts-message, .no-posts-message, .write-post-message {
     padding-top: 75px;
     margin-left: 20px;
 }
@@ -40,4 +40,21 @@
     margin-left: 25%;
     border: solid 1px #f0f0f0;
     margin-bottom: 2%;
+}
+
+.write-post-form input {
+    width: 55%;
+}
+
+.write-post-form textarea {
+    width: 55%;
+    height: 55%;
+}
+
+.write-post-form label {
+    font-size: 20px;
+}
+
+.write-post-form button {
+    margin-left: 56%;
 }

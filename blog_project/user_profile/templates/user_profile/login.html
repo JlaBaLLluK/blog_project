@@ -7,7 +7,7 @@
 {% if form.non_field_errors %}
 <p class="error-message">YWrong username or password! Please, try again:</p>
 {% endif %}
-<form method="post">
+<form method="post" class="login-form">
     <p>Username: {{ form.username }}</p>
     <p>Password: &nbsp{{ form.password }}</p>
     {% csrf_token %}
