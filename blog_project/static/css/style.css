@@ -51,7 +51,7 @@
     color: white;
 }
 
-.header-table a:hover {
+.username-cell a:hover, .logout-cell a:hover, .login-cell a:hover, .signup-cell a:hover {
     text-decoration: none;
     color: #4287f5;
 }

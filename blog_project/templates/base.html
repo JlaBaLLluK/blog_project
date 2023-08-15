@@ -14,7 +14,7 @@
 <header class="header">
     <table class="header-table">
         <tr>
-            <td class="django-blog-cell">Django Blog</td>
+            <td class="django-blog-cell"><a href="{% url 'homepage' %}">Django Blog</a></td>
             {% if user.is_authenticated %}
             <td class="username-cell"><a href="{% url 'profile' %}">{{ user }}</a></td>
             <td class="logout-cell"><a href="{% url 'logout' %}">Log Out</a></td>
