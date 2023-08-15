@@ -16,7 +16,7 @@
         <tr>
             <td class="django-blog-cell"><a href="{% url 'homepage' %}">Django Blog</a></td>
             {% if user.is_authenticated %}
-            <td class="username-cell"><a href="{% url 'profile' %}">{{ user }}</a></td>
+            <td class="username-cell"><a href="{% url 'profile' user %}">{{ user }}</a></td>
             <td class="logout-cell"><a href="{% url 'logout' %}">Log Out</a></td>
             {% else %}
             <td class="login-cell"><a href="{% url 'login' %}">Log In</a></td>
