@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
 from post.forms import WritePostForm
@@ -17,7 +17,7 @@ class SinglePostView(View):
     template_name = 'post/single_post.html'
 
     def get(self, request, post_id):
-        post = Post.objects.get(id=post_id)
+        post = get_object_or_404(Post, id=post_id)
         return render(request, self.template_name, {'post': post})
 
 
