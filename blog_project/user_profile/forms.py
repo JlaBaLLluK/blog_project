@@ -12,6 +12,6 @@ class ChangeUsernameForm(Form):
         password = self.cleaned_data.get('password')
         old_user = User.objects.filter(username=new_username)
         if len(old_user) != 0:
-            raise ValidationError("This username is already taken!")
+            raise ValidationError('This username is already taken!')
 
         return self.cleaned_data

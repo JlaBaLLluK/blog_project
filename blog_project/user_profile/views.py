@@ -63,5 +63,4 @@ class ChangeUsernameView(View):
         user.username = new_username
         user.save()
         authenticate(username=new_username, password=password)
-        login(request, user)
         return redirect('profile', new_username)
