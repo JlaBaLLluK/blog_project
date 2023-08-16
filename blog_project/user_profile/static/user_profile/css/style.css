@@ -71,3 +71,8 @@ p.success-message {
 .password-error {
     text-align: center;
 }
+
+.change-username-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
