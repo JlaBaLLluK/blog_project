@@ -3,18 +3,18 @@
     margin-left: 20px;
 }
 
-.all-posts {
+.all-user-posts {
     font-size: 20px;
     list-style: none;
     margin-left: -15px;
 }
 
-.all-posts a {
+.all-user-posts a {
     font-size: 20px;
     color: black;
 }
 
-.all-posts a:hover {
+.all-user-posts a:hover {
     color: #4287f5;
 }
 
@@ -25,8 +25,8 @@
 }
 
 .publish-date {
-    text-align: center;
-    font-size: 18px
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .post-text {
@@ -61,4 +61,9 @@
 
 .write-post-form {
     margin-left: 20px;
+}
+
+.single-post-publish-date {
+    text-align: center;
+    font-size: 18px;
 }

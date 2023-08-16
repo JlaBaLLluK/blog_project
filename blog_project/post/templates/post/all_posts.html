@@ -7,9 +7,13 @@
 {% block content %}
 {% if posts %}
 <h2 class="your-posts-message">Your posts:</h2>
-<ul class="all-posts">
+<ul class="all-user-posts">
     {% for post in posts %}
-    <li><a href="{% url 'single_post' post.id %}">{{ post }}</a>; publish date - {{ post.publish_date }}</li>
+    <li>
+        <div class="publish-date">{{ post.publish_date }}</div>
+        <a href="{% url 'single_post' post.id %}">{{ post }}</a>
+    </li>
+    <hr>
     {% endfor %}
 </ul>
 {% else %}

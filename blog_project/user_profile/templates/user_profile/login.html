@@ -5,10 +5,10 @@
 {% endblock %}
 {% block title %}Login{% endblock %}
 {% block content %}
-<h1 class="login-message" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Log In</h1>
+<h1 class="login-message">Log In</h1>
 <hr>
 {% if form.non_field_errors %}
-<p class="error-message">YWrong username or password! Please, try again:</p>
+<p class="login-error-message">Wrong username or password! Please, try again:</p>
 {% endif %}
 <form method="post" class="login-form">
     <p>Username: {{ form.username }}</p>

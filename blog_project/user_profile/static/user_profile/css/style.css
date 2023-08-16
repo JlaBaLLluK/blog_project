@@ -12,9 +12,10 @@
     text-align: center;
 }
 
-.error-message, .username-error, .password-error {
+.login-error-message, .username-error, .password-error {
     font-size: 20px;
     color: red;
+    text-align: center;
 }
 
 .repeat-password {
