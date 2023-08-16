@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
-from django.http import Http404
+from django.http import Http404, HttpRequest
 from django.shortcuts import render
 from django.views import View
 

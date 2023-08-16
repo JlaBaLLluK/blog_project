@@ -66,3 +66,7 @@ p.success-message {
 .change-account-data a:hover {
     color: #4287f5;
 }
+
+.password-error {
+    text-align: center;
+}

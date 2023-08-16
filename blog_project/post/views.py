@@ -45,5 +45,5 @@ class WritePostView(View):
         author = request.user
         post = Post(post_title=post_title, post_text=post_text, author=author)
         post.save()
-        return redirect('profile')
+        return redirect('profile', request.user.username)
 
