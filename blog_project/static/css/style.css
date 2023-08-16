@@ -51,7 +51,67 @@
     color: white;
 }
 
-.username-cell a:hover, .logout-cell a:hover, .login-cell a:hover, .signup-cell a:hover {
-    text-decoration: none;
+.username-cell a:hover, .logout-cell a:hover, .login-cell a:hover, .signup-cell a:hover, .all-posts a:hover {
     color: #4287f5;
+}
+
+.all-posts {
+    list-style: none;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.all-posts li {
+    margin-left: -15px;
+}
+
+.all-posts a {
+    text-decoration: none;
+    color: black;
+}
+
+.all-posts-message {
+    padding-top: 75px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.all-posts hr {
+    width: 100%;
+}
+
+.author {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.read-whole-post {
+    text-align: right;
+}
+
+.read-whole-post button {
+    border: solid 1px #4287f5;
+    background-color: white;
+    text: #4287f5;
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.read-whole-post button:hover {
+    background-color: #4287f5;
+    color: white;
+}
+
+.post-preview {
+    font-size: 20px;
 }
