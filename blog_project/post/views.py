@@ -8,7 +8,7 @@ from post.models import Post
 class AllUserPostsView(View):
     template_name = 'post/all_posts.html'
 
-    def get(self, request):
+    def get(self, request, username):
         posts = Post.objects.filter(author=request.user)
         return render(request, self.template_name, {'posts': posts})
 
