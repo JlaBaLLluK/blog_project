@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block links %}
-<link rel="stylesheet" type="text/css" href="{% static 'user_profile/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'user_profile/css/login_style.css' %}">
 {% endblock %}
 {% block title %}Login{% endblock %}
 {% block content %}
@@ -14,7 +14,7 @@
     <p>Username: {{ form.username }}</p>
     <p>Password: &nbsp{{ form.password }}</p>
     {% csrf_token %}
-    <p class="login-button">
+    <p>
         <button type="submit" class="btn btn-success" style="width: 85px;">Log In</button>
     <p>Don't have an account? You can <a href="{% url 'signup' %}">register</a> it now!</p>
 </form>

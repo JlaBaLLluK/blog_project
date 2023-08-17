@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block links %}
-<link rel="stylesheet" type="text/css" href="{% static 'post/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/single_post_style.css' %}">
 {% endblock %}
 {% block title %}{{ post.post_title }}{% endblock %}
 {% block content %}
-<div class="left-side"></div>
-<div class="right-side"></div>
 <div class="all-post-data">
     <h2 class="post-title">{{ post.post_title }}</h2>
     <p class="single-post-publish-date">{{ post.publish_date }}</p>

@@ -1,0 +1,22 @@
+.change-username-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.username-taken-error {
+    margin-left: 44.5%;
+    color: red;
+    font-size: 20px;
+}
+
+.change-username-form p {
+    text-align: center;
+}
+
+.change-username-form button {
+    margin-left: 49.4%;
+}
+
+.new-username-message {
+    margin-right: 40px;
+}
