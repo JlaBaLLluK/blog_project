@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import LogoutView, LoginView, PasswordChangeView, PasswordChangeDoneView
+from django.contrib.auth.views import LogoutView, LoginView, PasswordChangeView, PasswordChangeDoneView, \
+    PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView
 from django.urls import path
 from django.views.generic import TemplateView
 
 from post.views import AllUserPostsView
-from user_profile.views import SignupView, ProfileView, ChangeUsernameView
+from user_profile.views import SignupView, ProfileView, ChangeUsernameView, ResetPasswordView
 
 urlpatterns = [
     path('login/', LoginView.as_view(template_name='user_profile/login.html'), name='login'),
@@ -27,4 +28,5 @@ urlpatterns = [
          login_required(TemplateView.as_view(template_name='user_profile/password_change_done.html'),
                         login_url='login'),
          name='password_change_done'),
+    path('forgot-password/password-reset/', ResetPasswordView.as_view(), name='reset_password'),
 ]

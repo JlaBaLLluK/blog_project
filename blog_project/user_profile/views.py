@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
@@ -7,7 +7,7 @@ from django.http import Http404, HttpRequest
 from django.shortcuts import render, redirect
 from django.views import View
 
-from user_profile.forms import ChangeUsernameForm
+from user_profile.forms import ChangeUsernameForm, ResetPasswordForm
 
 
 class SignupView(View):
@@ -56,7 +56,6 @@ class ChangeUsernameView(View):
         new_username = form.cleaned_data.get('new_username')
         password = form.cleaned_data.get('password')
         if not check_password(password, request.user.password):
-            # return render(request, self.template_name, {'form': form})
             raise ValidationError("This password is wrong!")
 
         user = request.user
@@ -64,3 +63,22 @@ class ChangeUsernameView(View):
         user.save()
         authenticate(username=new_username, password=password)
         return redirect('profile', new_username)
+
+
+class ResetPasswordView(View):
+    template_name = 'user_profile/password_reset.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {'form': ResetPasswordForm})
+
+    def post(self, request):
+        form = ResetPasswordForm(request.POST)
+        if not form.is_valid():
+            return render(request, self.template_name, {'form': form})
+
+        username = request.POST['username']
+        new_password = form.cleaned_data.get('new_password')
+        user = User.objects.get(username=username)
+        user.set_password(new_password)
+        user.save()
+        return render(None, 'user_profile/password_reset_done.html')
