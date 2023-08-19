@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.forms import Form, CharField, PasswordInput, ModelForm
@@ -38,9 +39,11 @@ class ChangeUsernameForm(Form):
     def clean(self):
         new_username = self.cleaned_data.get('new_username')
         password = self.cleaned_data.get('password')
-        old_user = User.objects.filter(username=new_username)
-        if len(old_user) != 0:
-            raise ValidationError('This username is already taken!')
+        if len(User.objects.filter(username=new_username)) != 0:
+            raise ValidationError("This username is already taken!")
+
+        if ' ' in new_username:
+            raise ValidationError("Username can't contain spaces!")
 
         return self.cleaned_data
 
@@ -53,13 +56,19 @@ class ResetPasswordForm(Form):
     def clean(self):
         username = self.cleaned_data.get('username')
         try:
-            User.objects.get(username=username)
+            user = User.objects.get(username=username)
         except ObjectDoesNotExist:
             raise ValidationError('This username is wrong!')
 
         new_password = self.cleaned_data.get('new_password')
         repeat_password = self.cleaned_data.get('repeat_password')
+        if check_password(new_password, user.password):
+            raise ValidationError("The new password cannot be the same as the old password!")
+
         if new_password != repeat_password:
             raise ValidationError('Passwords are different!')
+
+        if new_password.isnumeric():
+            raise ValidationError("Password can't contain only digits!")
 
         return self.cleaned_data

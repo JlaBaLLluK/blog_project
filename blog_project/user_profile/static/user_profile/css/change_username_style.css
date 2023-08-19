@@ -3,10 +3,11 @@
     margin-left: 20px;
 }
 
-.username-taken-error {
+.form-errors {
     margin-left: 44.5%;
     color: red;
     font-size: 20px;
+    list-style: none;
 }
 
 .change-username-form p {

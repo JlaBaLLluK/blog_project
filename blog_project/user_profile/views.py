@@ -79,9 +79,6 @@ class ResetPasswordView(View):
 
         username = request.POST['username']
         new_password = form.cleaned_data.get('new_password')
-        if check_password(new_password, request.user.password):
-            raise ValidationError("The new password cannot be the same as the old password!")
-
         user = User.objects.get(username=username)
         user.set_password(new_password)
         user.save()
