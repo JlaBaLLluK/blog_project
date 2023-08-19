@@ -1,9 +1,8 @@
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from django.http import Http404, HttpRequest
+from django.http import Http404
 from django.shortcuts import render, redirect
 from django.views import View
 
