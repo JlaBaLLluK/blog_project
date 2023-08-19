@@ -3,10 +3,11 @@
     text-align: center;
 }
 
-.username-error, .password-error {
+.form-errors {
     font-size: 20px;
     color: red;
     text-align: center;
+    list-style: none;
 }
 
 .signup-form p {

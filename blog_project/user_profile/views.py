@@ -7,23 +7,25 @@ from django.http import Http404, HttpRequest
 from django.shortcuts import render, redirect
 from django.views import View
 
-from user_profile.forms import ChangeUsernameForm, ResetPasswordForm
+from user_profile.forms import ChangeUsernameForm, ResetPasswordForm, SignupForm
 
 
 class SignupView(View):
     template_name = 'user_profile/signup.html'
 
     def get(self, request):
-        return render(request, self.template_name, {'form': UserCreationForm})
+        return render(request, self.template_name, {'form': SignupForm})
 
     def post(self, request):
-        form = UserCreationForm(request.POST)
+        form = SignupForm(request.POST)
         if not form.is_valid():
             return render(request, self.template_name, {'form': form})
 
-        form.save()
         username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password1')
+        password = form.cleaned_data.get('password')
+        new_user = User(username=username)
+        new_user.set_password(password)
+        new_user.save()
         user = authenticate(username=username, password=password)
         login(request, user)
         return render(None, 'user_profile/registration_done.html', {'user': user})
