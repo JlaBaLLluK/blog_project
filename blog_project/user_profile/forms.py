@@ -23,11 +23,11 @@ class SignupForm(ModelForm):
         if ' ' in username:
             raise ValidationError("Username can't contain spaces!")
 
-        if password.isnumeric():
-            raise ValidationError("Password can't contain only digits!")
-
         if password != password_confirm:
             raise ValidationError("Passwords are different!")
+
+        if password.isnumeric():
+            raise ValidationError("Password can't contain only digits!")
 
         return self.cleaned_data
 
@@ -38,12 +38,32 @@ class ChangeUsernameForm(Form):
 
     def clean(self):
         new_username = self.cleaned_data.get('new_username')
-        password = self.cleaned_data.get('password')
         if len(User.objects.filter(username=new_username)) != 0:
             raise ValidationError("This username is already taken!")
 
         if ' ' in new_username:
             raise ValidationError("Username can't contain spaces!")
+
+        return self.cleaned_data
+
+
+class ChangePasswordForm(Form):
+    old_password = CharField(widget=PasswordInput, min_length=8)
+    new_password = CharField(widget=PasswordInput, min_length=8)
+    new_password_confirm = CharField(widget=PasswordInput, min_length=8)
+
+    def clean(self):
+        old_password = self.cleaned_data.get('old_password')
+        new_password = self.cleaned_data.get('new_password')
+        new_password_confirm = self.cleaned_data.get('new_password_confirm')
+        if new_password != new_password_confirm:
+            raise ValidationError('Passwords are different!')
+
+        if new_password.isnumeric():
+            raise ValidationError("Password can't contain only digits!")
+
+        if old_password == new_password:
+            raise ValidationError("The new password cannot be the same as the old password!")
 
         return self.cleaned_data
 

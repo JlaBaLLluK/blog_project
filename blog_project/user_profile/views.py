@@ -6,7 +6,7 @@ from django.http import Http404
 from django.shortcuts import render, redirect
 from django.views import View
 
-from user_profile.forms import ChangeUsernameForm, ResetPasswordForm, SignupForm
+from user_profile.forms import ChangeUsernameForm, ResetPasswordForm, SignupForm, ChangePasswordForm
 
 
 class SignupView(View):
@@ -64,6 +64,29 @@ class ChangeUsernameView(View):
         user.save()
         authenticate(username=new_username, password=password)
         return redirect('profile', new_username)
+
+
+class ChangePasswordView(View):
+    template_name = 'user_profile/password_change.html'
+
+    def get(self, request, username):
+        return render(request, self.template_name, {'form': ChangePasswordForm})
+
+    def post(self, request, username):
+        form = ChangePasswordForm(request.POST)
+        if not form.is_valid():
+            return render(request, self.template_name, {'form': form})
+
+        old_password = form.cleaned_data.get('old_password')
+        new_password = form.cleaned_data.get('new_password')
+        new_password_confirm = form.cleaned_data.get('new_password_confirm')
+        if not check_password(old_password, request.user.password):
+            raise ValidationError("Old password is wrong!")
+
+        request.user.set_password(new_password)
+        request.user.save()
+        login(request, request.user)
+        return render(None, 'user_profile/password_change_done.html', {'username': username})
 
 
 class ResetPasswordView(View):
