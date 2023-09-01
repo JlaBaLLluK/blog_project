@@ -40,10 +40,9 @@ class WritePostView(View):
         if not form.is_valid():
             return render(request, self.template_name, {'form': form})
 
-        post_title = request.POST['post_title']
-        post_text = request.POST['post_text']
+        post_title = form.cleaned_data.get('post_title')
+        post_text = form.cleaned_data.get('post_text')
         author = request.user
         post = Post(post_title=post_title, post_text=post_text, author=author)
         post.save()
         return redirect('profile', request.user.username)
-

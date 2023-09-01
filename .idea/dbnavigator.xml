@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="7a910139-9a44-41ae-92c2-7a266ff1e20a">
-      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+    <connection id="ff65f880-59cd-4430-b380-8635f7084177">
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -23,11 +23,12 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="7a910139-9a44-41ae-92c2-7a266ff1e20a" dataset="main.auth_user" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="7a910139-9a44-41ae-92c2-7a266ff1e20a" dataset="main.post_post" active-filter-id="EMPTY_FILTER" />
-  </component>
-  <component name="DBNavigator.Project.ExecutionManager">
-    <retain-sticky-names value="false" />
+    <filter-actions connection-id="ff65f880-59cd-4430-b380-8635f7084177" dataset="main.auth_user" active-filter-id="343111f0-e57b-463e-9a08-1a0b5422bd47">
+      <filter id="343111f0-e57b-463e-9a08-1a0b5422bd47" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="ff65f880-59cd-4430-b380-8635f7084177" dataset="main.post_post" active-filter-id="96faf831-8191-439c-88c6-c9b172a86800">
+      <filter id="96faf831-8191-439c-88c6-c9b172a86800" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -35,7 +36,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="7a910139-9a44-41ae-92c2-7a266ff1e20a" active="true" signed="true">
+      <connection id="ff65f880-59cd-4430-b380-8635f7084177" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -518,8 +519,5 @@
         </visibility-settings>
       </environment>
     </general-settings>
-  </component>
-  <component name="DBNavigator.Project.StatementExecutionManager">
-    <execution-variables />
   </component>
 </project>

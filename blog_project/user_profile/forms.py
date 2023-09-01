@@ -92,3 +92,16 @@ class ResetPasswordForm(Form):
             raise ValidationError("Password can't contain only digits!")
 
         return self.cleaned_data
+
+
+class DeleteProfileForm(Form):
+    password = CharField(widget=PasswordInput, required=True)
+    password_confirm = CharField(widget=PasswordInput, required=True)
+
+    def clean(self):
+        password = self.cleaned_data.get('password')
+        password_confirm = self.cleaned_data.get('password_confirm')
+        if password != password_confirm:
+            raise ValidationError("Passwords are different!")
+
+        return self.cleaned_data

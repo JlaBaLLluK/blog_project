@@ -4,7 +4,8 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from post.views import AllUserPostsView
-from user_profile.views import SignupView, ProfileView, ChangeUsernameView, ResetPasswordView, ChangePasswordView
+from user_profile.views import SignupView, ProfileView, ChangeUsernameView, ResetPasswordView, ChangePasswordView, \
+    DeleteProfileView
 
 urlpatterns = [
     path('login/', LoginView.as_view(template_name='user_profile/login.html'), name='login'),
@@ -22,4 +23,5 @@ urlpatterns = [
     path('<str:username>/password-change/', login_required(ChangePasswordView.as_view(), login_url='login'),
          name='change_password'),
     path('forgot-password/password-reset/', ResetPasswordView.as_view(), name='reset_password'),
+    path('<str:username>/delete_profile/', DeleteProfileView.as_view(), name='profile_delete'),
 ]
