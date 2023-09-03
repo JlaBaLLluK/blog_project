@@ -2,7 +2,7 @@
     width: 50%;
     margin-left: 25%;
     border: solid 1px #f0f0f0;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .post-title {
@@ -20,4 +20,12 @@
     font-size: 20px;
     padding-left: 15px;
     padding-right: 30px;
+}
+
+.delete-post button {
+    margin-bottom: 1%;
+}
+
+.delete-post {
+    margin-left: 47%;
 }

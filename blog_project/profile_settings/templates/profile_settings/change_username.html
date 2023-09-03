@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'profile_settings/css/change_username_style.css' %}">
+{% endblock %}}
+{% block title %}Change username{% endblock %}
+{% block content %}
+<h1 class="change-username-message">Change username</h1>
+<hr>
+<ul class='form-errors'>
+    {% for error in form.non_field_errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+<form method="post" class="change-username-form">
+    <p class="new-username-message">New username: {{ form.new_username }}</p>
+    <p>Password: {{ form.password }}</p>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Confirm</button>
+</form>
+{% endblock %}

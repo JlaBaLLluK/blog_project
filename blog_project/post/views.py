@@ -1,7 +1,10 @@
+from django.contrib.auth.hashers import check_password
+from django.core.exceptions import ValidationError
+from django.http import HttpRequest
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
-from post.forms import WritePostForm
+from post.forms import WritePostForm, DeletePostForm
 from post.models import Post
 
 
@@ -46,3 +49,23 @@ class WritePostView(View):
         post = Post(post_title=post_title, post_text=post_text, author=author)
         post.save()
         return redirect('profile', request.user.username)
+
+
+class DeletePostView(View):
+    template_name = 'post/delete_post.html'
+
+    def get(self, request, post_id):
+        return render(request, self.template_name, {'form': DeletePostForm})
+
+    def post(self, request, post_id):
+        form = DeletePostForm(request.POST)
+        if not form.is_valid():
+            return render(request, self.template_name, {'form': form})
+
+        password = form.cleaned_data.get('password')
+        if not check_password(password, request.user.password):
+            raise ValidationError("Password is wrong!")
+
+        Post.objects.get(id=post_id).delete()
+
+        return redirect('all_posts', request.user)

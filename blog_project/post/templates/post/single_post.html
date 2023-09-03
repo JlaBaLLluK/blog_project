@@ -10,4 +10,9 @@
     <p class="single-post-publish-date">{{ post.publish_date }}</p>
     <div class="post-text">{{ post.post_text }}</div>
 </div>
+{% if user.id == post.author.id %}
+<a href="{% url 'delete_post' post.id %}" class="delete-post">
+    <button type="submit" class="btn btn-danger">Delete post</button>
+</a>
+{% endif %}
 {% endblock %}
