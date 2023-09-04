@@ -5,41 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d849907d-422c-4422-ba49-11fa2666193c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog_project/post/static/post/css/delete_post_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_project/post/templates/post/delete_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_project/profile_settings/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_project/registration/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_project/login/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_project/profile_settings/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_project/registration/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/blog_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/blog_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/post/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/post/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/post/static/post/css/single_post_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/post/static/post/css/single_post_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/post/templates/post/single_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/post/templates/post/single_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/post/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/post/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/change_username_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/change_username_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/delete_profile_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/delete_profile_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/login_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/login/static/login/css/login_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/password_change_done_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/password_change_done_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/password_change_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/password_change_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/password_reset_done_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/password_reset_done_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/password_reset_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/password_reset_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/profile_settings_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/static/profile_settings/css/profile_settings_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/registration_done_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/registration/static/registration/css/registration_done_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/static/user_profile/css/signup_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/registration/static/registration/css/signup_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/change_username.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/change_username.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/delete_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/delete_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/login/templates/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/password_change.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/password_change.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/password_change_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/password_reset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/profile_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/profile_settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/registration_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/registration/templates/registration/registration_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/registration/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_project/login/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/login/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/profile_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/templates/profile_settings/profile_settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_project/profile_settings/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/profile_settings/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/user_profile/templates/user_profile/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_project/user_profile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/user_profile/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/user_profile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/user_profile/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Projects/Python/blog_project/blog_project/profile_settings/templates/profile_settings",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Python/blog_project/blog_project/profile_settings/templates/profile_settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Python\blog_project\blog_project\profile_settings\templates\profile_settings" />

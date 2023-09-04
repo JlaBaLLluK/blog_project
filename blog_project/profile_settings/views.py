@@ -61,10 +61,10 @@ class ChangePasswordView(View):
 class ResetPasswordView(View):
     template_name = 'profile_settings/password_reset.html'
 
-    def get(self, request):
+    def get(self, request, username):
         return render(request, self.template_name, {'form': ResetPasswordForm})
 
-    def post(self, request):
+    def post(self, request, username):
         form = ResetPasswordForm(request.POST)
         if not form.is_valid():
             return render(request, self.template_name, {'form': form})

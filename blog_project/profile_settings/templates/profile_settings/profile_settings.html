@@ -10,7 +10,7 @@
 <ul class="change-account-data">
     <li><a href="{% url 'change_username' user %}">Change username</a>.</li>
     <li><a href="{% url 'change_password' user %}">Change password</a>.</li>
-    <li><a href="{% url 'reset_password' %}">Reset password</a>.</li>
+    <li><a href="{% url 'reset_password' user %}">Reset password</a>.</li>
     <li><a href="{% url 'profile_delete' user %}">Delete profile</a>.</li>
 </ul>
 {% endblock %}
