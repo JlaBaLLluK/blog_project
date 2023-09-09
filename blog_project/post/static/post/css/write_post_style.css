@@ -1,0 +1,25 @@
+.write-post-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.write-post-form input {
+    width: 55%;
+}
+
+.write-post-form textarea {
+    width: 55%;
+    height: 55%;
+}
+
+.write-post-form label {
+    font-size: 20px;
+}
+
+.write-post-form button {
+    margin-left: 56%;
+}
+
+.write-post-form {
+    margin-left: 20px;
+}

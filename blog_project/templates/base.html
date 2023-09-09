@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block links %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header class="header">
+    <table class="header-table">
+        <tr>
+            <td class="django-blog-cell"><a href="{% url 'homepage' %}">Django Blog</a></td>
+            {% if user.is_authenticated %}
+            <td class="username-cell"><a href="{% url 'profile' user %}">{{ user }}</a></td>
+            <td class="logout-cell"><a href="{% url 'logout' %}">Log Out</a></td>
+            {% else %}
+            <td class="login-cell"><a href="{% url 'login' %}">Log In</a></td>
+            <td class="signup-cell"><a href="{% url 'signup' %}">Sign Up</a></td>
+            {% endif %}
+        </tr>
+    </table>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>

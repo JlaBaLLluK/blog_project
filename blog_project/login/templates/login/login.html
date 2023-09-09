@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'login/css/login_style.css' %}">
+{% endblock %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1 class="login-message">Log In</h1>
+<hr>
+{% if form.non_field_errors %}
+<p class="login-error-message">Wrong username or password! Please, try again:</p>
+{% endif %}
+<form method="post" class="login-form">
+    <p>Username: {{ form.username }}</p>
+    <p class="password">Password: {{ form.password }}</p>
+    {% csrf_token %}
+    <p>
+        <button type="submit" class="btn btn-success" style="width: 85px;">Log In</button>
+    <p>Don't have an account? You can <a href="{% url 'signup' %}">register</a> it now!</p>
+    <p><a href="{% url 'reset_password' user %}">Forgot your password?</a></p>
+</form>
+{% endblock %}

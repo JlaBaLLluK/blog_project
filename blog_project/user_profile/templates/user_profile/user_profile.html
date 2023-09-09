@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'user_profile/css/user_profile_style.css' %}">
+{% endblock %}
+{% block title %}{{ user}}{% endblock %}
+{% block content %}
+<h1 class="welcome-message">Welcome to your profile, {{ user }}!</h1>
+<hr>
+<h3 class="navigation-message">Navigation:</h3>
+<ul class="navigation-contents">
+    <li><a href="{% url 'all_posts' user %}">View all posts.</a></li>
+    <li><a href="{% url 'write_post' %}">Write a new post.</a></li>
+    <li><a href="{% url 'profile_settings' user %}">Profile settings.</a></li>
+</ul>
+{% endblock %}

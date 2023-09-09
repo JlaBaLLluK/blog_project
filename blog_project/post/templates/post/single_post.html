@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/single_post_style.css' %}">
+{% endblock %}
+{% block title %}{{ post.post_title }}{% endblock %}
+{% block content %}
+<div class="all-post-data">
+    <h2 class="post-title">{{ post.post_title }}</h2>
+    <p class="single-post-publish-date">{{ post.publish_date }}</p>
+    <div class="post-text">{{ post.post_text }}</div>
+</div>
+{% if user.id == post.author.id %}
+<a href="{% url 'delete_post' post.id %}" class="delete-post">
+    <button type="submit" class="btn btn-danger">Delete post</button>
+</a>
+{% endif %}
+{% endblock %}

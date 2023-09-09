@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/write_post_style.css' %}">
+{% endblock %}
+{% block title %}Write post{% endblock %}
+{% block content %}
+<h2 class="write-post-message">Write your post:</h2>
+<form method="post" class="write-post-form">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p>
+        <button type="submit" class="btn btn-success">Done</button>
+    </p>
+</form>
+{% endblock %}

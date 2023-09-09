@@ -1,0 +1,21 @@
+.signup-message {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.form-errors {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    list-style: none;
+}
+
+.signup-form p {
+    text-align: center;
+}
+
+.repeat-password {
+    margin-right: 75px;
+}
+
+

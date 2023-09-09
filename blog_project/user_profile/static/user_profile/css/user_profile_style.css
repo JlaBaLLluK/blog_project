@@ -1,0 +1,22 @@
+.welcome-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.navigation-message {
+    margin-left: 30px;
+}
+
+.navigation-contents {
+    font-size: 20px;
+}
+
+.navigation-contents li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation-contents li a:hover {
+    text-decoration: none;
+    color: #4287f5;
+}

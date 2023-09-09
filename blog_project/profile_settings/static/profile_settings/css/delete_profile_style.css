@@ -1,0 +1,19 @@
+.delete-profile-message {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.form-errors {
+    font-size: 22px;
+    color: red;
+    text-align: center;
+    list-style: none;
+}
+
+.password-confirm {
+    margin-right: 60px;
+}
+
+form {
+    text-align: center
+}
