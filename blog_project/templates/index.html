@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+Django Blog
+{% endblock %}
+{% block content %}
+{% if posts %}
+<h2 class="all-posts-message">All posts ordered by publish date:</h2>
+<ul class="all-posts">
+    {% for post in posts %}
+    <li>
+        <div>
+            <div class="author">
+                {{ post.author }}
+            </div>
+            <div class="date">
+                {{ post.publish_date }}
+            </div>
+            <div class="title">
+                <a href="{% url 'single_post' post.id %}">{{ post }}</a>
+            </div>
+            <div class="post-preview">
+                {{ post.post_text|truncatechars:501 }}
+            </div>
+            <div class="read-whole-post">
+                <a href="{% url 'single_post' post.id %}">
+                    <button type="button">Continue...</button>
+                </a>
+            </div>
+        </div>
+    </li>
+    <hr>
+    {% endfor %}
+</ul>
+{% else %}
+<h2 class="no-posts-message">There aren't any posts yet!</h2>
+{% endif %}
+{% endblock %}
