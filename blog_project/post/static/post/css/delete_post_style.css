@@ -1,0 +1,20 @@
+.delete-post-message {
+    padding-top: 75px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.form-errors {
+    font-size: 22px;
+    color: red;
+    text-align: center;
+    list-style: none;
+}
+
+form {
+    text-align: center;
+}
+
+.confirm-password {
+    margin-right: 60px;
+}

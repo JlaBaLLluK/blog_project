@@ -1,0 +1,26 @@
+.profile-settings-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.username-message {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.change-account-data {
+    list-style: none;
+}
+
+.change-account-data li {
+    margin-left: -15px;
+}
+
+.change-account-data a {
+    color: black;
+    font-size: 18px;
+}
+
+.change-account-data a:hover {
+    color: #4287f5;
+}

@@ -1,0 +1,24 @@
+.your-posts-message, .no-posts-message {
+    padding-top: 75px;
+    margin-left: 20px;
+}
+
+.all-user-posts {
+    font-size: 20px;
+    list-style: none;
+    margin-left: -15px;
+}
+
+.all-user-posts a {
+    font-size: 20px;
+    color: black;
+}
+
+.all-user-posts a:hover {
+    color: #4287f5;
+}
+
+.publish-date {
+    font-size: 16px;
+    font-weight: 400;
+}

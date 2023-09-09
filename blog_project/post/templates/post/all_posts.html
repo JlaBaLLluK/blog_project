@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/all_posts_style.css' %}">
+{% endblock %}
+{% block title %}{{ user }}'s posts{% endblock %}
+{% block content %}
+{% if posts %}
+<h2 class="your-posts-message">Your posts:</h2>
+<ul class="all-user-posts">
+    {% for post in posts %}
+    <li>
+        <div class="publish-date">{{ post.publish_date }}</div>
+        <a href="{% url 'single_post' post.id %}">{{ post }}</a>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2 class="no-posts-message">There aren't any posts yet!</h2>
+{% endif %}
+{% endblock %}
